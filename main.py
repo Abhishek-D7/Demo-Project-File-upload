@@ -10,3 +10,4 @@ async def upload_file(uploaded_file: UploadFile):
     with open(uploaded_file.filename, "wb") as buffer:
         shutil.copyfileobj(uploaded_file.file, buffer)
     return {"filename": uploaded_file.filename, "message": "Saved with stream method"}
+
